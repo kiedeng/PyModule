@@ -1,0 +1,5 @@
+简单http代理服务器搭建
+1. yum install squid
+2. vi /etc/squid/squid.conf 将http_access deny all 中deny 改为allow,http_port后面的是端口号，默认为3128。可改可不改。
+3. service squid restart
+4. 如果有防火墙， iptables -I INPUT -p tcp --dport 3128 -j ACCEPT
